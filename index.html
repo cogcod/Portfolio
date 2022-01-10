@@ -7,13 +7,53 @@
     <title>Yura's Portfolio</title>
     <meta name="description" content="Portfolio of web publishers that anyone wants to work with"> <!-- 설명 -->
     <meta name="author" content="Yura">
-    <link rel="icon" type="images/png" href="images/favicon.png"> <!-- 파비콘 -->
+    <link rel="icon" type="image/favicon" href="images/favicon.ico" /> <!-- 파비콘 -->
     <script src="https://kit.fontawesome.com/dfb7e03691.js" crossorigin="anonymous"></script> <!-- 아이콘 : 폰트어썸 -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- 구글폰트 -->
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script> <!-- defer: html이 purshing되는 동안 js파일을 함께 다운받고, html을 다 읽은 후 js가 실행되도록.-->
 </head>
 <body>
-<!--  -->
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <img src="images/logo.png" alt="#">
+            <a href="#">Yura</a>
+        </div>
+        <ul class="navbar__menu">
+            <!-- 누르면 스크롤링 될것이기 때문에 a태그를 사용하지 않음 -->
+            <li class="navbar__menu__item">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">My work</li>
+            <li class="navbar__menu__item">Testimonial</li>
+            <li class="navbar__menu__item">Contact</li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+        <img class="home__avatar" src="images/profile.jpeg" alt="Yura's profile photo">
+        <h1 class="home__title">Hello, <br /> I'm Yura</h1>
+        <h2 class="home__description">트렌디한 퍼블리싱에 앞서나가는, 내일이 더 기대되는 웹퍼블리셔</h2>
+        <button class="home__contact">CONTACT ME</button>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+
+    </section>
+
+    <!-- Skills -->
+    <section id="skills"></section>
+
+    <!-- Work -->
+    <section id="work"></section>
+
+    <!-- Textimonials -->
+    <section id="testimonials"></section>
+
+    <!-- Contact -->
+    <section id="contact"></section>
 </body>
 </html> 
