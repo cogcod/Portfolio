@@ -4,7 +4,8 @@
     --color-white: #fff;
     --color-light-white: #eee;
     --color-dark-white: #bdbdbd;
-    --color-pink: #fe918d;
+    --color-purple: #aa69b7;
+    --color-dark-purple: #7e2d8e;
     --color-black: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
@@ -46,8 +47,18 @@ a{
 }
 
 ul{
-    list-style: none;
     padding-left: 0;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 /* Typography : heading text*/
@@ -78,7 +89,7 @@ h3{
     display: flex;
     justify-content: space-between;
     padding: 16px;
-    background-color: var(--color-pink);
+    background-color: var(--color-purple);
     align-items: center; /*아이템 세로정렬*/
     color: var(--color-white);
 }
@@ -115,6 +126,36 @@ h3{
 }
 
 .navbar__menu__item:hover{
-    background-color: rgb(222, 121, 138);
+    background-color: var(--color-dark-purple);
 }
 
+
+/* -----Home----- */
+#home{
+    padding: 40px;
+    height: 650px;
+    text-align: center;
+    background: url(images/background.png) center/cover no-repeat;
+}
+
+.home__avatar{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description{
+    color: var(--color-white);
+}
+
+.home__contact{
+    color: #fff;
+    font-size: var(--font-regular);
+    font-weight:var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+}
