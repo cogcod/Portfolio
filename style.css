@@ -6,10 +6,10 @@
     --color-dark-white: #bdbdbd;
     --color-purple: #aa69b7;
     --color-dark-purple: #7e2d8e;
-    --color-black: #4d4d4d;
+    --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
-    --color-blue: #73aace;
+    --color-pink: #c28a9c;
     --color-yellow: hsl(50, 100%, 91%);
     --color-orange: #feb546;
     --color-black: #000;
@@ -28,6 +28,9 @@
 
     /* Size */
     --size-border-radius: 4px;
+
+    /* Annimation */
+    --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -158,4 +161,215 @@ h3{
     padding: 8px 12px;
     border: 2px solid #fff;
     border-radius: 4px;
+}
+
+/* --'section' class common-- */
+.section{
+    margin: auto;
+    padding: 50px;
+    text-align: center;
+}
+
+.section__container{
+    /* 배경을 좌우 전면에 넣고 싶을 때, html에서 이 div클래스를 추가하여 그 안에 요소들을 넣어준다. */
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* -----About----- */
+.about__majors{
+    display: flex;
+    margin: 80px 0;
+    justify-content: space-between;
+}
+
+.major__icon{
+    margin: auto;
+    margin-bottom: 16px;
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 70px; /*Awesome-font도 폰트이기 떄문에 font-size로 크기조절*/
+    border: 2px solid var(--color-pink);
+    border-radius: 50%;
+}
+
+.major__icon i{
+    /* 250-350ms가 사용자가 보기에 적합한 수치 */
+    transition: all var(--animation-duration) ease;
+}
+
+/* icon전체에 hover했을 때 i에만 스타일링을 변경 */
+.major__icon:hover i{
+    color:var(--color-pink);
+    transform: rotate(-30deg) scale(1.1);
+}
+
+.major__title,
+.major__description{
+    color: var(--color-dark-grey);
+}
+
+
+/* -----Skill----- */
+#skills{
+    background-color: var(--color-yellow);
+}
+
+.skillset{
+    display: flex;
+    margin: 30px 0;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+}
+
+.skillset__title{
+    color: var(--color-white);
+}
+
+.skillset__left{
+    /* flex-basis: Flex 요소의 기본크기 설정 - row일때는 너비 */
+    flex-basis: 60%;
+    padding: 20px 40px;
+    background-color: var(--color-dark-grey);
+}
+
+.skill{
+    margin-bottom: 32px;
+}
+
+.skill__description{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill__bar{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.skill__value{
+    /* width 값은 각각 다르게 줄 것이기 때문에 html에서*/
+    height: 3px;
+    background-color: var(--color-orange);
+}
+
+.skillset__right{
+    flex-basis: 40%;
+}
+
+.tools{
+    background-color: var(--color-grey);
+}
+
+.tools, .etc{
+    padding: 20px;
+}
+
+
+/* -----Portfolio----- */
+.portfolio__categories{
+    margin: 40px;
+}
+
+.category__btn{
+    border: 1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover{
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+
+.category__btn.active .category__count, /*btn이 active 상태인 count와*/
+.category__btn:hover .category__count{
+    opacity: 1;
+    top: 0;
+}
+
+.category__count{
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 4px;
+
+    width: 24px;
+    height: 24px;
+    color: var(--color-white);
+    font-size: var(--font-small);
+    line-height: 24px;
+    background-color: var(--color-orange);
+    border-radius: 50%;
+
+    opacity: 0; /*평소에는 보이지 않다가 hover시 밑으로 내려오도록*/
+    transition: all var(--animation-duration) ease-in;
+}
+
+.portfolio__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+    margin: 2px;
+    width: 280px;
+    height: 250px;
+    background-color: var(--color-light-white);
+}
+
+.portfolio__img{
+    max-width: 100%; /*부모 사이즈만큼, 다른 아이템에 겹쳐지지 않게*/
+    max-height: 100%;
+}
+
+    /* hover시 나올 작품설명 */
+.portfolio__description{
+    display: flex;
+    flex-direction: column; /*열 방향 flex*/
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    transform: translateY(10px); /*10px 아래에서*/
+    transition: all var(--animation-duration) ease-in;
+}
+
+.portfolio__list:hover .portfolio__description{
+    opacity: 0.8;
+    transform: translateY(0px); /*원래자리로 올라오도록*/
+
+}
+
+.portfolio__description h3{
+    color: var(--color-white);
+}
+
+    /* 중앙 선 */
+.portfolio__description h3:after{
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: 8px;
+
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-dark-white);
 }

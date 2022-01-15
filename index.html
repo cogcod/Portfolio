@@ -42,7 +42,7 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <p>
             저는 어렵고 복잡한 코드를 가독성 좋은 간결한 코드로 리팩토링 하는 것에 관심이 많으며 신속한 유지보수를 위해 항상 고민합니다. <br/>
@@ -55,118 +55,121 @@
                 <div class="major__icon">
                     <i class="fas fa-code"></i>
                 </div>
-                <div class="major__title">Semantic Markup</div>
+                <h2 class="major__title">Semantic Markup</h2>
                 <div class="major__description">웹표준 및 웹 접근성을 준수하여 <br /> 시멘틱 태그를 작성합니다.</div>
             </div>
             <div class="mjor">
                 <div class="major__icon">
                     <i class="fas fa-laptop"></i>
                 </div>
-                <div class="major__title">Responsive Web</div>
+                <h2 class="major__title">Responsive Web</h2>
                 <div class="major__description">사용자 편의성 향상과 검색엔진 최적화를 위해 <br /> Media Query를 사용한 반응형 웹을 구현합니다.<br /> </div>
             </div>
             <div class="mjor">
                 <div class="major__icon">
                     <i class="fab fa-js-square"></i>
                 </div>
-                <div class="major__title">Animation</div>
+                <h2 class="major__title">Animation</h2>
                 <div class="major__description">자바스크립트의 최신 문법을 활용한 <br /> 다양한 동적 기능의 구현이 가능합니다.</div>
             </div>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-            어제의 나보다 오늘 한걸음 더 성장하는 것을 좋아하고, 새로운 기술을 배우는 것에 대한 열정이 있습니다. <br/>
-            현재 JavaScript의 기본기를 다지며 동시에 React / Vue.js 와 같은 프레임워크를 공부 중입니다. 
-        </p>
+    <section id="skills" class="section">
+        <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>
+                어제의 나보다 오늘 한걸음 더 성장하는 것을 좋아하고, 새로운 기술을 배우는 것에 대한 열정이 있습니다. <br/>
+                현재 JavaScript의 기본기를 다지며 동시에 React / Vue.js 와 같은 프레임워크를 공부 중입니다. 
+            </p>
 
-        <!-- skill 컨테이너 -->
-        <div class="skillset">
-            <!-- left 박스 : 5개 -->
-            <div class="skillset__left">
-                <h3 class="skillset__title">Skills</h3>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>HTML</span>
-                        <span>98%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>CSS / SCSS</span>
-                        <span>93%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>JavaScript</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>jQuery</span>
-                        <span>89%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>React</span>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-            </div>
+            <!-- skill 컨테이너 -->
+            <div class="skillset">
 
-            <!-- right 박스 -->
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
-                        <li><span>Photoshop</span></li>
-                        <li><span>Illustrator</span></li>
-                        <li><span>XD</span></li>
-                        <li><span>Visual Studio Code</span></li>
-                        <li><span>Excel / PowerPoint / Word</span></li>
-                    </ul>
+                <!-- left 박스 : 5개 -->
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 98%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>CSS / SCSS</span>
+                            <span>93%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 93%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>jQuery</span>
+                            <span>89%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 89%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>React</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 70%;"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="etc">
-                    <h3 class="skillset__title">Etc</h3>
-                    <ul class="etc__list">
-                        <li><span>Git</span></li>
-                        <li><span>Github</span></li>
-                    </ul>
+
+                <!-- right 박스 -->
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li><span>Photoshop</span></li>
+                            <li><span>Illustrator</span></li>
+                            <li><span>XD</span></li>
+                            <li><span>Visual Studio Code</span></li>
+                            <li><span>Excel / PowerPoint / Word</span></li>
+                        </ul>
+                    </div>
+                    <div class="etc">
+                        <h3 class="skillset__title">Etc</h3>
+                        <ul class="etc__list">
+                            <li><span>Git</span></li>
+                            <li><span>Github</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio -->
-    <section id="portfolio">
+    <section id="portfolio" class="section">
         <h1>Portfolio</h1>
         <!-- 상단 카테고리 -->
         <div class="portfolio__categories">
-            <button class="category__btn">All <span class="category__count">10</span></button>
-            <button class="category__btn">Web-Basic <span class="category__count">4</span></button>
-            <button class="category__btn">Projects <span class="category__count">3</span></button>
+            <button class="category__btn active">All <span class="category__count">8</span></button>
+            <button class="category__btn">Web-Basic <span class="category__count">3</span></button>
+            <button class="category__btn">Projects <span class="category__count">2</span></button>
             <button class="category__btn">Clone-Coding <span class="category__count">3</span></button>
         </div>
 
@@ -202,7 +205,7 @@
                 </div>
             </a>
             <a href="https://github.com/cogcod" class="portfolio__list" target="blank">
-                <img class="portfolio__img" src="images/poltfolio/project.png" alt="portfolio">
+                <img class="portfolio__img" src="images/poltfolio/project8.png" alt="portfolio">
                 <div class="portfolio__description">
                     <h3>My Portfolio</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -233,7 +236,7 @@
     </section>
 
     <!-- Resume -->
-    <section id="resume">
+    <section id="resume" class="section">
         <h1>"함께 성장하고 싶은 웹퍼블리셔"</h1>
         <div class="resume__intro">
             <img src="images/profile.jpeg" alt="photo">
@@ -252,7 +255,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
         <h1 class="contact__title">Contact me</h1>
         <h2 class="contact__email">seolyura@naver.com</h2>
         <div class="contact__links">
