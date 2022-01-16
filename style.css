@@ -5,7 +5,7 @@
     --color-light-white: #eee;
     --color-dark-white: #bdbdbd;
     --color-purple: #aa69b7;
-    --color-dark-purple: #7e2d8e;
+    --color-dark-purple: rgba(239, 165, 254, 0.349);
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
@@ -73,7 +73,7 @@ h1{
 }
 
 h2{
-    font-size: var(--font-regular);
+    font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px 0;
@@ -136,7 +136,7 @@ h3{
 /* -----Home----- */
 #home{
     padding: 40px;
-    height: 650px;
+    height: 660px;
     text-align: center;
     background: url(images/background.png) center/cover no-repeat;
 }
@@ -372,4 +372,93 @@ h3{
     width: 25px;
     height: 2px;
     background-color: var(--color-dark-white);
+}
+
+
+/* -----Contact----- */
+#contact{
+    background-color: var(--color-pink);
+}
+
+#contact h1{
+    margin-bottom: -20px;
+    color: var(--color-white);
+}
+
+.contact__container{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 350px;
+}
+
+.contact__txt{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.contact__txt p{
+    margin-top: 25px;
+    font-size: 22px;
+    line-height: 35px;
+}
+
+.contact__txt h2,
+.contact__txt p,
+.contact__list{
+    color: var(--color-white);
+}
+
+    /* 중앙 세로선 */
+.contact__txt:after{
+    content: '';
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 80px;
+
+    width: 2px;
+    height: 100px;
+    background-color: var(--color-white);
+    opacity: 0.7;
+}
+
+.contact__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+.contact__list a{
+    display: flex;
+    align-items: center;
+    margin: 13px 0;
+    font-size: var(--font-regular);
+}
+
+.contact__list p{
+    margin: 0;
+    margin-left: 10px;
+}
+
+.contact__list a:hover{
+    color: var(--color-yellow);
+}
+
+
+
+/* -----footer----- */
+footer{
+    padding: 10px 0;
+    background-color: var(--color-light-white);
+}
+
+.contact__rights{
+    height: 50px;
+    color: var(--color-dark-grey);
+    line-height: 50px;
+    text-align: center;
 }
