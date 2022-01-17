@@ -89,12 +89,20 @@ h3{
 
 /* -----Navbar----- */
 #navbar{
+    position: fixed;
     display: flex;
     justify-content: space-between;
-    padding: 16px;
-    background-color: var(--color-purple);
-    align-items: center; /*아이템 세로정렬*/
+    padding: 5px 20px;
+    width: 100%;
     color: var(--color-white);
+    align-items: center; /*아이템 세로정렬*/
+    background-color: transparent;
+    transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
+}
+
+#navbar.navbar--dark{
+    background-color: var(--color-pink);
 }
 
 .navbar__menu{
@@ -109,12 +117,18 @@ h3{
 .navbar__logo a{
     display: flex;
     width: 130px;
-    height: 50px;
+    height: 35px;
+}
+
+.navbar__logo img{
+    display: block;
+    width: 30px;
+    height: 35px;
 }
 
 .navbar__logo p{
     margin: 0 10px;
-    line-height: 50px;
+    line-height: 35px;
 }
 
 .navbar__menu__item{
@@ -132,11 +146,21 @@ h3{
     background-color: var(--color-dark-purple);
 }
 
+    /* 토글버튼 */
+.navbar__toggle-btn{
+    display: none;
+    position: absolute;
+    top: 27px;
+    right: 32px;
+    color: #fff;
+    font-size: 24px;
+}
+
 
 /* -----Home----- */
 #home{
-    padding: 40px;
-    height: 660px;
+    padding: 160px 0 40px;
+    height: 770px;
     text-align: center;
     background: url(images/background.png) center/cover no-repeat;
 }
@@ -461,4 +485,77 @@ footer{
     color: var(--color-dark-grey);
     line-height: 50px;
     text-align: center;
+}
+
+
+/* -----media query----- */
+
+@media screen and (max-width:768px){
+
+    /* Navbar */
+    .navbar__toggle-btn{
+        display: block;
+    }
+
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* About */
+    .about__majors{
+        flex-direction: column;
+    }
+
+    .mjor{
+        margin-bottom: 38px;
+    }
+
+    /* Skills */
+    .skillset{
+        flex-direction: column;
+    }
+
+    /* Portfolio */
+    .portfolio__list{
+        flex-grow: 1; /*화면을 가득 채우는것*/
+    }
+
+    /* Contact */
+    .contact__container{
+        flex-direction: column;
+        height: 560px;
+    }
+
+    .contact__txt{
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .contact__txt:after{
+        display: none;
+    }
+
+    .contact__txt__box{
+        margin: auto;
+    }
+
+    .contact__txt__box p{
+        font-size: var(--font-regular);
+    }
+
+    .contact__list{
+        margin: 30px auto 0;
+    }
+
+    .contact__list a{
+        font-size: 24px;
+    }
 }
