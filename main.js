@@ -39,12 +39,34 @@ navbarMenu.addEventListener('click',(event)=>{
 const homeContactBtn = document.querySelector('.home__contact');
 
 homeContactBtn.addEventListener('click', ()=>{
-   // document.querySelector('#contact').scrollIntoView({behavior:'smooth'});
    scrollIntoView('#contact');
 });
+
 
 // 중복되는 스크롤함수 선언 
 function scrollIntoView(selector){
    const scrollTo = document.querySelector(selector); 
    scrollTo.scrollIntoView({behavior:'smooth'}); 
 }
+
+
+// Home_ 스크롤시 점점 투명하게 
+
+// window.addEventListener('scroll',()=>{
+//    const home = document.querySelector('#home');
+//    const value = window.scrollY;
+
+//    if(value>444){
+//       home.style.animation="homeDisappear 1s ease forwards"
+//    }else{
+//       home.style.animation="homeAppear 1s ease forwards"
+//    }
+// });
+
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll',()=>{
+   console.log(1 - window.scrollY / homeHeight);
+   home.style.opacity = 1 - window.scrollY / homeHeight;
+});
