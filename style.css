@@ -2,10 +2,10 @@
 :root{
     /* Color */
     --color-white: #fff;
+    --color-white-blur: rgba(255, 255, 255, 0.187);
     --color-light-white: #eee;
     --color-dark-white: #bdbdbd;
     --color-purple: #aa69b7;
-    --color-dark-purple: rgba(239, 165, 254, 0.349);
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
@@ -103,6 +103,7 @@ h3{
 
 #navbar.navbar--dark{
     background-color: var(--color-pink);
+    opacity: 0.9;
 }
 
 .navbar__menu{
@@ -143,7 +144,7 @@ h3{
 }
 
 .navbar__menu__item:hover{
-    background-color: var(--color-dark-purple);
+    background-color: var(--color-white-blur);
 }
 
     /* 토글버튼 */
