@@ -7,7 +7,7 @@ function scrollIntoView(selector){
 }
 
 
-// Navbar_ 스크롤시 배경색 넣기 
+// Navbar_ 스크롤시 배경색 넣기 (Make navbar transparent when it is on the top)
 const navBar = document.querySelector('#navbar');
 const navbarHeight = navBar.getBoundingClientRect().height;
 
@@ -24,7 +24,8 @@ document.addEventListener('scroll', ()=>{
 });
 
 
-// Navbar_ menu 클릭시 해당 ID로 이동 
+
+// Navbar_ menu 클릭시 해당 ID로 이동 (Handle scrolling when tapping on the navbar menu)
 const navbarMenu = document.querySelector('.navbar__menu');
 
 navbarMenu.addEventListener('click',(event)=>{
@@ -37,20 +38,21 @@ navbarMenu.addEventListener('click',(event)=>{
    }
    
    // console.log(event.target.dataset.link);  
-
+   
    navbarMenu.classList.remove('open');
    scrollIntoView(link);
 });
 
 
-// Navbar_ toggle button (반응형)
+
+// Navbar toggle button for small screen 
 const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
 navbarToggleBtn.addEventListener('click',()=>{
    navbarMenu.classList.toggle('open');
 });
 
 
-// Home_ Contactme 버튼 클릭시 이동 
+// Home_ Contactme 버튼 클릭시 이동 (Handle click on "contact me" button on home)
 const homeContactBtn = document.querySelector('.home__contact');
 
 homeContactBtn.addEventListener('click', ()=>{
@@ -69,6 +71,7 @@ document.addEventListener('scroll',()=>{
 });
 
 
+
 // 스크롤시 arrow-up 버튼 나타나게 
 const arrowUp = document.querySelector('.arrow-up');
 
@@ -85,6 +88,7 @@ arrowUp.addEventListener('click', ()=>{
 });
 
 
+
 // Portfolio 기능 구현
 const btnContainer = document.querySelector('.portfolio__categories');
 const portfolioContainer = document.querySelector('.portfolio__container');
@@ -98,10 +102,16 @@ btnContainer.addEventListener('click', (e)=>{
       return;
    }
 
-   portfolioContainer.classList.add('anim-out');
+   // Remove selection from the previous item and select the new one
+   const active = document.querySelector('.category__btn.selected');
+   active.classList.remove('selected');
    
+   const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+   target.classList.add('selected');
+
+   portfolioContainer.classList.add('anim-out');   
    setTimeout(()=>{
-      
+
       portfolio.forEach((item)=>{
          console.log(item.dataset.type);
          if(filter === '*' || filter === item.dataset.type){
