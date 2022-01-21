@@ -1,19 +1,26 @@
 'use strict';
 
+// 스크롤함수 선언 
+function scrollIntoView(selector){
+   const scrollTo = document.querySelector(selector); 
+   scrollTo.scrollIntoView({behavior:'smooth'}); 
+}
+
 
 // Navbar_ 스크롤시 배경색 넣기 
 const navBar = document.querySelector('#navbar');
 const navbarHeight = navBar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', ()=>{
-   console.log(window.scrollY);
-   console.log(`navbarHeight : ${navbarHeight}`);
+   // console.log(window.scrollY);
+   // console.log(`navbarHeight : ${navbarHeight}`);
 
    if(window.scrollY > navbarHeight){
       navBar.classList.add('navbar--dark');
    } else {
       navBar.classList.remove('navbar--dark');
    }
+
 });
 
 
@@ -29,9 +36,17 @@ navbarMenu.addEventListener('click',(event)=>{
       return;
    }
    
-   console.log(event.target.dataset.link);  
+   // console.log(event.target.dataset.link);  
 
+   navbarMenu.classList.remove('open');
    scrollIntoView(link);
+});
+
+
+// Navbar_ toggle button (반응형)
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click',()=>{
+   navbarMenu.classList.toggle('open');
 });
 
 
@@ -43,30 +58,62 @@ homeContactBtn.addEventListener('click', ()=>{
 });
 
 
-// 중복되는 스크롤함수 선언 
-function scrollIntoView(selector){
-   const scrollTo = document.querySelector(selector); 
-   scrollTo.scrollIntoView({behavior:'smooth'}); 
-}
-
 
 // Home_ 스크롤시 점점 투명하게 
-
-// window.addEventListener('scroll',()=>{
-//    const home = document.querySelector('#home');
-//    const value = window.scrollY;
-
-//    if(value>444){
-//       home.style.animation="homeDisappear 1s ease forwards"
-//    }else{
-//       home.style.animation="homeAppear 1s ease forwards"
-//    }
-// });
-
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 
 document.addEventListener('scroll',()=>{
-   console.log(1 - window.scrollY / homeHeight);
+   // console.log(1 - window.scrollY / homeHeight);
    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+// 스크롤시 arrow-up 버튼 나타나게 
+const arrowUp = document.querySelector('.arrow-up');
+
+document.addEventListener('scroll', ()=>{
+   if(window.scrollY > homeHeight / 2){
+      arrowUp.classList.add('visible');
+   }else{
+      arrowUp.classList.remove('visible');
+   }
+});
+
+arrowUp.addEventListener('click', ()=>{
+   scrollIntoView('#home');
+});
+
+
+// Portfolio 기능 구현
+const btnContainer = document.querySelector('.portfolio__categories');
+const portfolioContainer = document.querySelector('.portfolio__container');
+const portfolio = document.querySelectorAll('.portfolio__list');
+
+btnContainer.addEventListener('click', (e)=>{
+   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+   console.log(filter);
+
+   if(filter == null){
+      return;
+   }
+
+   portfolioContainer.classList.add('anim-out');
+   
+   setTimeout(()=>{
+      
+      portfolio.forEach((item)=>{
+         console.log(item.dataset.type);
+         if(filter === '*' || filter === item.dataset.type){
+            item.classList.remove('invisible');
+         }else{
+            item.classList.add('invisible');
+         }
+      });
+
+      portfolioContainer.classList.remove('anim-out');
+   },200);
+
+
+   
 });
