@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+#wrap{
+    width: 1180px;
+    margin: 0 auto;
+}
+
+h1{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.slides{
+    overflow: hidden;
+    position: relative;
+    height: 620px;
+}
+
+.slides>.slides-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(1180px * 5);
+    *zoom:1
+}
+
+.slides>.slides-container:after{
+    display:block;clear:both;content:'';
+}
+
+.slides>.slides-container>li{
+    float: left;
+    width: 1180px;
+    background-size: cover;
+}
+
+.slides>.slides-container>li:nth-child(1){
+    background-image: url(../images/slide_1.jpg);
+}
+
+.slides>.slides-container>li:nth-child(2){
+    background-image: url(../images/slide_2.jpg);
+}
+
+.slides>.slides-container>li:nth-child(3){
+    background-image: url(../images/slide_3.jpg);
+}
+
+.slides>.slides-container>li:nth-child(4){
+    background-image: url(../images/slide_4.jpg);
+}
+
+.slides>.slides-container>li:nth-child(5){
+    background-image: url(../images/slide_5.jpg);
+}
+
+.slides>.slides-container>li>a{
+    display: block;    
+    height: 620px;
+    text-indent: -9999px;
+}
+
+.slides>.slides-pagination{
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    width: 110px;
+    margin-left: -55px;
+    *zoom:1;
+}
+
+.slides>.slides-pagination:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.slides>.slides-pagination>li{
+    float: left;
+    margin-right: 5px;
+    width: 18px;
+    background-image: url(../images/bul.png);
+}
+
+.slides>.slides-pagination>li:last-child{
+    margin-right: 0;
+}
+
+.slides>.slides-pagination>li:hover,
+.slides>.slides-pagination>li.on{
+    background-position: 0 -18px;
+}
+
+.slides>.slides-pagination>li>a{
+    display: block;
+    height: 18px;
+    text-indent: -9999px;
+}
+
+/* 이전 다음 버튼 */
+.slides>a{
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 100px;    
+    margin-top: -50px;
+    text-indent: -9999px;
+    background-image: url(./../images/btn_navigation.png);
+    background-repeat: no-repeat;
+}
+
+.slides>a.prev{
+    left: 0;
+    background-position: -5px -225px;
+}
+
+.slides>a.prev:hover,
+.slides>a.prev.on{
+    left: 0;
+    background-position: -5px -335px;
+}
+
+.slides>a.next{
+    right: 0;
+    background-position: -5px -5px;
+}
+
+.slides>a.next:hover,
+.slides>a.next.on{
+    right: 0;
+    background-position: -5px -115px;
+}

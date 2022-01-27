@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어쿼리를 적용한 반응형 레이아웃</title>
+  <style>
+    #wrap{
+      width: 860px;
+      margin: 50px auto;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 0 5px white;
+    }
+
+    header{
+      height: 100px;
+      background-color:cadetblue;
+      border-radius: 5px;
+    }
+
+    section{
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+
+    section>.left{
+      width: 200px;
+    }
+
+    section>.left>.lnb{
+      margin-bottom: 10px;
+      height: 250px;
+      background-color: darkkhaki;
+      border-radius: 5px;
+    }
+
+    section>.left>.ad{
+      height: 140px;
+      background-color: indianred;
+      border-radius: 5px;
+    }
+
+    section>.cont{
+      width: 650px;
+      height: 400px;
+      background-color: lightblue;
+      border-radius: 5px;
+    }
+
+    footer{
+      height: 100px;
+      background-color: rosybrown;
+      border-radius: 5px;
+    }
+
+    @media screen and (max-width:640px){
+      #wrap{
+      width: 100%;
+      margin: 50px 0;
+    }
+
+    h1{
+      font-size: 25px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    section{
+      display: block;
+    }
+
+    section>.left{
+      width: 100%;
+    }
+
+    section>.cont{
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>브라우저의 가로폭에 반응하는 미디어쿼리</h1>
+
+    <header>header</header>
+
+    <section>
+      <article class="left">
+        <div class="lnb">lnb</div>
+        <div class="ad">ad</div>
+      </article>
+      <article class="cont">content</article>
+    </section>
+
+    <footer>footer</footer>
+  </div>  
+</body>
+</html>

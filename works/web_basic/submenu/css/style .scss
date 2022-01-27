@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+#wrap{
+  >header{
+    position: relative;
+    background-image: url(./../images/bg_header.gif);
+
+    //서브메뉴 배경판 
+    >.bg_lnb{
+      display: none; //배경과 lnb는 js로 처리 
+      position: absolute;
+      left: 0;
+      top: 100px;
+      width: 100%;
+      min-width: 980px;
+      height: 226px;
+      background-image: url(./../images/bg_gnb_sub_menu02.gif);
+      border-top: 3px solid green;
+      border-bottom: 1px solid green;
+
+      //도넛
+      >a{
+        display: block;
+        position: absolute;
+        left: 50%; //중앙에서 왼쪽으로 간격주기 (그래야 위치고정)
+        top: 20px;
+        margin-left: -500px;
+
+        width: 155px;
+        height: 138px;
+        background-image: url(./../images/item.png);
+        text-indent: -9999px;
+      }
+    }
+
+    >.container{
+      position: relative;
+      width: 980px;
+      height: 100px;
+      margin: 0 auto;
+
+      >h1.logo{
+        position: absolute;
+        left: 0;
+        top: 18px;
+        width: 127px;
+        background-image: url(./../images/logo.png);
+
+        >a{
+          display: block;
+          height: 69px;
+          text-indent: -9999px;
+        }
+      }
+
+      >.snb{
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 10px;
+
+        >li{
+          margin-right: 15px;
+
+          &:last-child{margin-right: 0;}
+
+          >a:hover{text-decoration: underline;}
+        }
+      }
+
+      >nav{
+        position: absolute;
+        right: 0;
+        top: 60px;
+
+        >.gnb{
+          display: flex;
+          justify-content: space-between;
+          width: 710px;
+
+          //커서가 메인메뉴의 사이를 이동할때 서브메뉴가 꺼지면 안된다. 
+          //그래서 각각의 li의 원래크기에 50씩 더하고, li의 너비를 모두 더한 값을 gnb에 넣어준다. 
+          >li{
+            background-position: 10px 8px;  //sub에 hover시 (빨간바탕) 좌우로 padding10 을 줘서 X를 10px준다.
+            background-repeat: no-repeat;
+            
+            &:hover{background-position: 10px 0;}
+            
+            &:nth-child(1){
+              // width: 58px; 이미지 원래의 크기 
+              width: 128px;
+              background-image: url(./../images/gnb_menu01.png);
+              background-position-x: center;
+              &:hover{background-image: url(./../images/gnb_menu01_on.png);}
+            }
+            &:nth-child(2){
+              // width: 61px;
+              width: 100px;
+              background-image: url(./../images/gnb_menu02.png);
+              &:hover{background-image: url(./../images/gnb_menu02_on.png);}
+            }
+            &:nth-child(3){
+              // width: 137px;
+              width: 173px;
+              background-image: url(./../images/gnb_menu03.png);
+              &:hover{background-image: url(./../images/gnb_menu03_on.png);}
+            }
+            &:nth-child(4){
+              // width: 62px;
+              width: 105px;
+              background-image: url(./../images/gnb_menu04.png);
+              &:hover{background-image: url(./../images/gnb_menu04_on.png);}
+            }
+            &:nth-child(5){
+              // width: 68px;
+              width: 110px;
+              background-image: url(./../images/gnb_menu05.png);
+              &:hover{background-image: url(./../images/gnb_menu05_on.png);}
+            }
+            &:nth-child(6){
+              // width: 74px; 마지막은 오른쪽에 정렬되야 하니까 이미지크기만큼만
+              width: 84px;
+              background-image: url(./../images/gnb_menu06.png);
+              &:hover{background-image: url(./../images/gnb_menu06_on.png);}
+            }
+            
+            >a{
+              display: block;
+              height: 34px;
+              text-indent: -9999px;
+              // border: 1px solid #000;
+            }
+
+            //서브메뉴
+            >.lnb{
+              display: none;
+              margin-top: 20px;
+              
+              >li{
+
+                >a{
+                  display: block;
+                  height: 35px;
+                  padding: 0 10px;
+                  line-height: 35px;
+
+                  &:hover{
+                    color: #fff;
+                    background-color: #D31145;
+                  }
+                }
+              }
+            }
+          }//li
+        }//.gnb
+      }//nav
+    }
+  }
+
+  >section{
+  min-width: 980px;
+  height: 550px;
+  background-image: url(./../images/banner.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  }
+}
+
+

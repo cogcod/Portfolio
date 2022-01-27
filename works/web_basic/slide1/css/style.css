@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+
+h1{
+  color:rgb(117, 117, 117);
+}
+
+#slides{
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
+  height: 528px;
+}
+
+/* 이전,다음버튼 */
+#slides>a{
+  display: block;
+  position: absolute;
+  top: 280px;
+  width: 44px;
+  height: 44px;
+  text-indent: -9999px;
+}
+
+#slides>a:nth-of-type(1){
+  left: 0;
+  background-image: url(./../images/img_talk_button.png);
+  background-position: 0 0;
+}
+
+#slides>a:nth-of-type(1):hover{
+  background-position: -70px 0;
+}
+
+#slides>a:nth-of-type(2){
+  right: 0;
+  background-image: url(./../images/img_talk_button.png);
+  background-position: 0 -70px;
+}
+
+#slides>a:nth-of-type(2):hover{
+  background-position: -70px -70px;
+}
+
+/* 슬라이드 네비게이션 */
+#slides>.slides-nav{
+  display: flex;
+  margin: 0 auto;
+  width: 480px;
+}
+
+#slides>.slides-nav>li{
+  width: 80px;
+}
+
+#slides>.slides-nav>li:nth-of-type(1){
+  background-image: url(./../images/btn_talk.png);
+  background-position: 0 0;
+}
+
+#slides>.slides-nav>li:nth-of-type(1).on,
+#slides>.slides-nav>li:nth-of-type(1):hover{background-position:0 -90px;}
+
+#slides>.slides-nav>li:nth-of-type(2){
+  background-image: url(./../images/btn_talk.png);
+  background-position: -80px 0;
+}
+
+#slides>.slides-nav>li:nth-of-type(2).on,
+#slides>.slides-nav>li:nth-of-type(2):hover{background-position:-80px -90px;}
+
+#slides>.slides-nav>li:nth-of-type(3){
+  background-image: url(./../images/btn_talk.png);
+  background-position: -160px 0;
+}
+
+#slides>.slides-nav>li:nth-of-type(3).on,
+#slides>.slides-nav>li:nth-of-type(3):hover{background-position:-160px -90px;}
+
+#slides>.slides-nav>li:nth-of-type(4){
+  background-image: url(./../images/btn_talk.png);
+  background-position: -240px 0;
+}
+
+#slides>.slides-nav>li:nth-of-type(4).on,
+#slides>.slides-nav>li:nth-of-type(4):hover{background-position:-240px -90px;}
+
+#slides>.slides-nav>li:nth-of-type(5){
+  background-image: url(./../images/btn_talk.png);
+  background-position: -320px 0;
+}
+
+#slides>.slides-nav>li:nth-of-type(5).on,
+#slides>.slides-nav>li:nth-of-type(5):hover{background-position:-320px -90px;}
+
+#slides>.slides-nav>li:nth-of-type(6){
+  background-image: url(./../images/btn_talk.png);
+  background-position: -400px 0;
+}
+
+#slides>.slides-nav>li:nth-of-type(6).on,
+#slides>.slides-nav>li:nth-of-type(6):hover{background-position:-400px -90px;}
+
+#slides>.slides-nav>li>a{
+  display: block;
+  height: 90px;
+  text-indent: -9999px;
+}
+
+/* 슬라이드 컨테이너 */
+#slides>.slides-img{
+  overflow: hidden;
+  position: relative;
+  margin: 30px auto;
+  width: 478px;
+  height: 438px;
+}
+
+/* left를 0을 주어야 js에서 컨테이너 이동할때 첫번째 슬라이드가 이동하지 않는다! */
+#slides>.slides-img>.slides-container{
+  display: flex;
+  position: absolute;
+  left: 0;  
+  top: 0;
+  width: 2868px;
+}
+
+#slides>.slides-img>.slides-container>li{
+  width: 478px;
+}
+
+#slides>.slides-img>.slides-container>li:nth-of-type(1){background-image: url(./../images/img_talk_cont1.png);}
+#slides>.slides-img>.slides-container>li:nth-of-type(2){background-image: url(./../images/img_talk_cont2.png);}
+#slides>.slides-img>.slides-container>li:nth-of-type(3){background-image: url(./../images/img_talk_cont3.png);}
+#slides>.slides-img>.slides-container>li:nth-of-type(4){background-image: url(./../images/img_talk_cont4.png);}
+#slides>.slides-img>.slides-container>li:nth-of-type(5){background-image: url(./../images/img_talk_cont5.png);}
+#slides>.slides-img>.slides-container>li:nth-of-type(6){background-image: url(./../images/img_talk_cont6.png);}
+
+#slides>.slides-img>.slides-container>li>a{
+  display: block;
+  height: 438px;
+  text-indent: -9999px;
+}

@@ -141,6 +141,10 @@ h3{
     border-radius: var(--size-border-radius);
 }
 
+.navbar__menu__item.active{
+    border: 1px solid var(--color-white);
+}
+
 .navbar__menu__item:hover{
     border: 1px solid #fff;
     background-color: var(--color-white-blur);
@@ -419,6 +423,24 @@ h3{
 
 
 /* -----Contact----- */
+@keyframes left_appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes left_disappear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 #contact{
     background-color: var(--color-pink);
 }

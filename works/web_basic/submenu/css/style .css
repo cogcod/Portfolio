@@ -1,0 +1,183 @@
+#wrap > header {
+  position: relative;
+  background-image: url(./../images/bg_header.gif);
+}
+
+#wrap > header > .bg_lnb {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  min-width: 980px;
+  height: 226px;
+  background-image: url(./../images/bg_gnb_sub_menu02.gif);
+  border-top: 3px solid green;
+  border-bottom: 1px solid green;
+}
+
+#wrap > header > .bg_lnb > a {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  margin-left: -500px;
+  width: 155px;
+  height: 138px;
+  background-image: url(./../images/item.png);
+  text-indent: -9999px;
+}
+
+#wrap > header > .container {
+  position: relative;
+  width: 980px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+#wrap > header > .container > h1.logo {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 127px;
+  background-image: url(./../images/logo.png);
+}
+
+#wrap > header > .container > h1.logo > a {
+  display: block;
+  height: 69px;
+  text-indent: -9999px;
+}
+
+#wrap > header > .container > .snb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+#wrap > header > .container > .snb > li {
+  margin-right: 15px;
+}
+
+#wrap > header > .container > .snb > li:last-child {
+  margin-right: 0;
+}
+
+#wrap > header > .container > .snb > li > a:hover {
+  text-decoration: underline;
+}
+
+#wrap > header > .container > nav {
+  position: absolute;
+  right: 0;
+  top: 60px;
+}
+
+#wrap > header > .container > nav > .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 710px;
+}
+
+#wrap > header > .container > nav > .gnb > li {
+  background-position: 10px 8px;
+  background-repeat: no-repeat;
+}
+
+#wrap > header > .container > nav > .gnb > li:hover {
+  background-position: 10px 0;
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(1) {
+  width: 128px;
+  background-image: url(./../images/gnb_menu01.png);
+  background-position-x: center;
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(1):hover {
+  background-image: url(./../images/gnb_menu01_on.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(2) {
+  width: 100px;
+  background-image: url(./../images/gnb_menu02.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(2):hover {
+  background-image: url(./../images/gnb_menu02_on.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(3) {
+  width: 173px;
+  background-image: url(./../images/gnb_menu03.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(3):hover {
+  background-image: url(./../images/gnb_menu03_on.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(4) {
+  width: 105px;
+  background-image: url(./../images/gnb_menu04.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(4):hover {
+  background-image: url(./../images/gnb_menu04_on.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(5) {
+  width: 110px;
+  background-image: url(./../images/gnb_menu05.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(5):hover {
+  background-image: url(./../images/gnb_menu05_on.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(6) {
+  width: 84px;
+  background-image: url(./../images/gnb_menu06.png);
+}
+
+#wrap > header > .container > nav > .gnb > li:nth-child(6):hover {
+  background-image: url(./../images/gnb_menu06_on.png);
+}
+
+#wrap > header > .container > nav > .gnb > li > a {
+  display: block;
+  height: 34px;
+  text-indent: -9999px;
+}
+
+#wrap > header > .container > nav > .gnb > li > .lnb {
+  display: none;
+  margin-top: 20px;
+}
+
+#wrap > header > .container > nav > .gnb > li > .lnb > li > a {
+  display: block;
+  height: 35px;
+  padding: 0 10px;
+  line-height: 35px;
+}
+
+#wrap > header > .container > nav > .gnb > li > .lnb > li > a:hover {
+  color: #fff;
+  background-color: #D31145;
+}
+
+#wrap > section {
+  min-width: 980px;
+  height: 550px;
+  background-image: url(./../images/banner.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/*# sourceMappingURL=style .css.map */
