@@ -5,20 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>청미정 BDIH </title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Source+Sans+Pro&family=Source+Serif+4:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
-<body>
+<body>  
+    
+    <!-- Slides -->
+    <section id="slides">
+        <div class="slides__container">
+            <ul class="slides__img">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+
+        <div class="pagination__line"></div>
+        <ul class="slides__pagination">
+            <li class="on"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </section>
+
+
     <!-- Navbar -->
     <nav id="navbar">
+        <div class="navbar__container">
             <ul class="navbar__gnb">
                 <li><a href="#">BRAND</a></li>
                 <li><a href="#">SHOP</a></li>
                 <li><a href="#">COMMUNITY</a></li>
             </ul>
-            <a class="navbar__logo">
-                <img src="images/logo.png" alt="#">
-            </a>
+
+            <div class="navbar__logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="#">
+                </a>
+            </div>
+
             <ul class="navbar__snb">
                 <li><a href="#">로그인</a></li>
                 <li><a href="#">회원가입</a></li>
@@ -26,19 +52,83 @@
                 <li><a href="#">주문조회</a></li>
                 <li><a href="#">고객센터</a></li>
             </ul>
+        </div>
     </nav>
 
-    <!-- Slides -->
-    <div class="slides__container">
-        <a href="#"><img src="images/img_mainvisual1.jpg" alt="#"></a>
-        <a href="#"><img src="images/img_mainvisual2.jpg" alt="#"></a>
-        <a href="#"><img src="images/img_mainvisual3.jpg" alt="#"></a>
-    </div>
+    <!-- Contents -->
+    <section id="contents__wrap">
+        <h1>
+            <img src="images/h1_title.gif" alt="#">
+        </h1>
 
-    <ul class="slides__pagination">
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-    </ul>
+        <div class="contents__container">
+            <div class="contents__left">
+                <ul class="slides__product">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+
+                <div class="contents__line"></div>
+                <ul class="contents__pagination">
+                    <li class="on"><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+
+            <div class="contents__right">
+                <div class="contents__right__top">
+                    <a href="#">
+                        <img src="images/bnr_fixed.jpg" alt="#">
+                    </a>
+                </div>
+
+                <div class="contents__right__bottom">
+                    <div class="news__txt__container">
+                        <div class="news__tit">
+                            <img src="images/tit_news.png" alt="news">
+                        </div>
+
+                        <div class="news__btn">
+                            <a class="btn_left" href="#" >
+                                <img src="images/btn_left_1.png" alt="btn_left">
+                            </a>
+                            <a class="btn_right" href="#" >
+                                <img src="images/btn_right_1.png" alt="btn_right">
+                            </a>
+                            <a class="btn_pause" href="#" >
+                                <img src="images/btn_pause_1.png" alt="btn_pause">
+                            </a>
+                        </div>
+                        
+                        <ul class="news__txt">
+                            <li>
+                                <a href="#">
+                                    <h3 class="news__tit">청미정 샘플배송 정책 변경안내</h3>
+                                    <p class="news__con">청미정의 다양한 샘플을 이용하실 수 있도록 샘플 정책이..</p>
+                                    <p class="news__date">2020.05.18</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h3 class="news__tit">청미정 배송업체 및 <br/> 배송안내</h3>
+                                    <p class="news__con">청미정은 CJ대한통운 택배를 이용하여 3만원 이상 구매시 무료배송..</p>
+                                    <p class="news__date">2021.06.11</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contents__arr"></div>
+
+                    <div class="slides__news__img">
+                        <img src="images/bn1.jpg" alt="img1">
+                        <img src="images/bn2.jpg" alt="img2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
