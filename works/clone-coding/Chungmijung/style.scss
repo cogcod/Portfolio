@@ -33,6 +33,10 @@ button{
     outline: none;
 }
 
+address,em{
+    font-style: normal;
+}
+
 /* Typography : heading text */
 h1{
     font-size: $font-large;
@@ -377,8 +381,179 @@ h3{
                         height: 252px;
                     }
                 }
-
             }
+        }
+    }
+}
+
+footer{
+    position: relative;
+    margin-top: 100px;
+
+    >.footer__top__wrap{
+        padding: 10px;
+        height: 20px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+
+        >.top__menu{
+            position: absolute;
+            left: 220px;
+            top: 13px;
+            
+            >a{
+                margin-right: 8px;
+                color: rgb(110, 110, 110);
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        >.top__notice{
+            display: flex;
+            position: absolute;
+            right: 230px;
+            top: 13px;
+
+            >h3{
+                margin-right: 20px;
+                font-weight: 400;
+                font-size: 15px;
+            }
+
+            >a{
+                display: block;
+                color: rgb(157, 157, 157);
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+    }
+
+    >.footer__inner__box{
+        position: relative;
+        margin-left: 220px;
+        height: 350px;
+
+        >.footer__logo{
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+
+        >.inner__left{
+            position: absolute;
+            left: 120px;
+            top: 50px;
+
+            >span,
+            address,
+            a{
+                margin-right: 5px;
+                color: rgb(135, 135, 135);
+                font-size: 12px;
+            }
+
+            >span{
+                >a{
+                    color: #000;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                
+            }
+            
+            .num{
+                >span{
+                    display: inline-block;
+                    margin-right: 5px;
+                    margin-top: 10px;
+                    font-size: 12px;
+
+                    >em{
+                        color: rgb(156, 116, 47);
+                    }
+
+                    &:nth-of-type(8),
+                    &:nth-of-type(9),
+                    &:nth-of-type(10){
+                        border: 1px solid #000;
+                        color: #000;
+                    }
+                }
+            }
+
+            >a:hover{
+                text-decoration: underline;
+            }
+
+            >p{
+                color: rgb(135, 135, 135);
+                font-size: 14px;
+            }
+        }
+
+        >.inner__line{
+            position: absolute;
+            right: 50%;
+            margin-right: -45px;
+            top: 50px;
+            height: 180px;
+            border-right: 1px solid rgb(228, 228, 228);
+        }
+
+        >.inner__right{
+            margin-left: 700px;
+            padding-top: 35px;
+            font-size: 12px;
+
+            >.tit{
+                font-size: 13px;
+                color: rgb(79, 79, 79);
+                font-weight: 600;
+            }
+
+            >.txt{
+                color: rgb(126, 126, 126);
+            }
+
+            >a{
+                display: inline-block;
+                margin-top: 18px;
+                color: #6d9811;
+                font-weight: 500;
+                font-size: 13px;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+}
+
+#footer__fixed{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 63px;
+    background-color: #443a31;
+
+    >a{
+        display: inline-block;
+        margin-left: 220px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 21px;
+        font-family: serif;
+        height: 63px;
+        line-height: 63px;
+
+        >span{
+            font-family:initial;
         }
     }
 }

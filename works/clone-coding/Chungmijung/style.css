@@ -28,6 +28,10 @@ button {
   outline: none;
 }
 
+address, em {
+  font-style: normal;
+}
+
 /* Typography : heading text */
 h1 {
   font-size: 38px;
@@ -405,5 +409,172 @@ h3 {
   margin: 0;
   width: 245px;
   height: 252px;
+}
+
+footer {
+  position: relative;
+  margin-top: 100px;
+}
+
+footer > .footer__top__wrap {
+  padding: 10px;
+  height: 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+footer > .footer__top__wrap > .top__menu {
+  position: absolute;
+  left: 220px;
+  top: 13px;
+}
+
+footer > .footer__top__wrap > .top__menu > a {
+  margin-right: 8px;
+  color: #6e6e6e;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+footer > .footer__top__wrap > .top__notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 230px;
+  top: 13px;
+}
+
+footer > .footer__top__wrap > .top__notice > h3 {
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+footer > .footer__top__wrap > .top__notice > a {
+  display: block;
+  color: #9d9d9d;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+footer > .footer__inner__box {
+  position: relative;
+  margin-left: 220px;
+  height: 350px;
+}
+
+footer > .footer__inner__box > .footer__logo {
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+
+footer > .footer__inner__box > .inner__left {
+  position: absolute;
+  left: 120px;
+  top: 50px;
+}
+
+footer > .footer__inner__box > .inner__left > span,
+footer > .footer__inner__box > .inner__left address,
+footer > .footer__inner__box > .inner__left a {
+  margin-right: 5px;
+  color: #878787;
+  font-size: 12px;
+}
+
+footer > .footer__inner__box > .inner__left > span > a {
+  color: #000;
+}
+
+footer > .footer__inner__box > .inner__left > span > a:hover {
+  text-decoration: underline;
+}
+
+footer > .footer__inner__box > .inner__left .num > span {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+footer > .footer__inner__box > .inner__left .num > span > em {
+  color: #9c742f;
+}
+
+footer > .footer__inner__box > .inner__left .num > span:nth-of-type(8), footer > .footer__inner__box > .inner__left .num > span:nth-of-type(9), footer > .footer__inner__box > .inner__left .num > span:nth-of-type(10) {
+  border: 1px solid #000;
+  color: #000;
+}
+
+footer > .footer__inner__box > .inner__left > a:hover {
+  text-decoration: underline;
+}
+
+footer > .footer__inner__box > .inner__left > p {
+  color: #878787;
+  font-size: 14px;
+}
+
+footer > .footer__inner__box > .inner__line {
+  position: absolute;
+  right: 50%;
+  margin-right: -45px;
+  top: 50px;
+  height: 180px;
+  border-right: 1px solid #e4e4e4;
+}
+
+footer > .footer__inner__box > .inner__right {
+  margin-left: 700px;
+  padding-top: 35px;
+  font-size: 12px;
+}
+
+footer > .footer__inner__box > .inner__right > .tit {
+  font-size: 13px;
+  color: #4f4f4f;
+  font-weight: 600;
+}
+
+footer > .footer__inner__box > .inner__right > .txt {
+  color: #7e7e7e;
+}
+
+footer > .footer__inner__box > .inner__right > a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #6d9811;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+footer > .footer__inner__box > .inner__right > a:hover {
+  text-decoration: underline;
+}
+
+#footer__fixed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 63px;
+  background-color: #443a31;
+}
+
+#footer__fixed > a {
+  display: inline-block;
+  margin-left: 220px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 21px;
+  font-family: serif;
+  height: 63px;
+  line-height: 63px;
+}
+
+#footer__fixed > a > span {
+  font-family: initial;
 }
 /*# sourceMappingURL=style.css.map */
