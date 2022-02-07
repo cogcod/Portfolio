@@ -60,23 +60,24 @@ h3 {
 
 #slides > .slides__container {
   overflow: hidden;
-  position: relative;
-  left: 0;
-  top: 0;
   width: 100%;
+  height: 700px;
 }
 
 #slides > .slides__container > .slides__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 300%;
   height: 700px;
   margin: 0;
 }
 
 #slides > .slides__container > .slides__img > li {
-  width: 100%;
+  width: 33.33333%;
   height: 700px;
   background-position: center center;
   background-size: cover;
@@ -125,6 +126,7 @@ h3 {
 
 #slides > .slides__pagination > li {
   width: 12px;
+  height: 12px;
   background-repeat: no-repeat;
 }
 
@@ -132,7 +134,7 @@ h3 {
   background-image: url(images/pager_off.png);
 }
 
-#slides > .slides__pagination > li:hover {
+#slides > .slides__pagination > li.on, #slides > .slides__pagination > li:hover {
   background-image: url(images/pager_on.png);
 }
 

@@ -67,19 +67,20 @@ h3{
 
     >.slides__container{
         overflow: hidden;
-        position: relative;
-        left: 0;
-        top: 0;
         width: 100%;
+        height: 700px;
 
         >.slides__img{
             display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 300%;
             height: 700px;
             margin: 0;        
             
             >li{
-                width: 100%;
+                width: 33.33333%;
                 height: 700px;
                 background-position: center center;
                 background-size: cover;
@@ -117,16 +118,18 @@ h3{
 
         >li{
             width: 12px;
+            height: 12px;
             background-repeat: no-repeat;
 
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3){background-image: url(images/pager_off.png);}
 
+            &.on,
             &:hover{
                 background-image: url(images/pager_on.png);
             }
-            
+
             >a{
                 display: block;
                 height: 12px;
