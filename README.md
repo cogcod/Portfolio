@@ -24,7 +24,7 @@
 <br>
 
 > ## Advanced Feature 
-- **CSS 변수를 이용하여 Color, Font-size, Font-weight에 통일감을 줌**
+- CSS 변수를 이용하여 Color, Font-size, Font-weight에 통일감을 줌
 ```css
 /* Global */
 :root{
@@ -64,7 +64,7 @@
 
 <br>
 
-- **미디어 쿼리 : 네비게이션 바 재배치**
+- 미디어 쿼리 : 네비게이션 바 재배치
 ![responsive web](./images/responsive.png)
 
 ```css
@@ -98,7 +98,7 @@
 
 <br>
 
-- **Navbar 클릭 시 Scroll 이벤트 구현**
+- Navbar 클릭 시 Scroll 이벤트 구현
 ```javascript
 // 스크롤함수 선언 
 function scrollIntoView(selector){
@@ -139,4 +139,4 @@ navbarMenu.addEventListener('click',(event)=>{
 
 <br>
 
-> ## Thank you for reading😊
+## Thank you for reading😊
