@@ -9,17 +9,17 @@
 
 > ## Goals
 - HTML과 CSS를 사용한 견고한 마크업 작성 
-- CSS 변수 기능을 사용한 전체적인 통일감 부여
+- CSS variable 기능을 사용한 전체적인 통일감 부여
 - 미디어 쿼리를 이용한 반응형 사이트 구축 
-- Vanila JavaScript만을 이용한 동적 로직 구현 
+- Vanilla JavaScript만을 이용한 동적 로직 구현 
 
 <br>
 
 > ## Skills
 - HTML
-- CSS(변수)
+- CSS(variable)
 - Media Query 
-- Vanila JavaScript
+- Vanilla JavaScript
 
 <br>
 
@@ -94,6 +94,7 @@
     .navbar__menu.open{
         display: block;
     }
+}
 ```
 
 <br>
