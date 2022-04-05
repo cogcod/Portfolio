@@ -34,24 +34,30 @@ body{
     font-family: 'Noto Sans KR',돋움;
 }
 
-.text-center{
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-}
 
-/* 화면에 보이지는 않지만 시각장애인을 위한 screen reader는 글을 읽을수 있다.  */
-.sr-only{
-    position: absolute;
-    left:-9999px;
-}
-
-.blind{display: none;}
-
-/* float 했을때 부모에게 필요한 마감재 */
-.clearfix{*zoom:1;}
-.clearfix:after{
+.clear{*zoom:1;}
+.clear:after{
     display: block;
     clear: both;
     content: '';
 }
+
+/* 본문 바로가기 */
+.skip{
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    background: rgb(31, 31, 31);
+    transition: all 0.5s;
+    z-index: 1000;
+}
+
+.skip:focus{top: 0;}
+
+.hide{position: absolute; left: -9999px;}

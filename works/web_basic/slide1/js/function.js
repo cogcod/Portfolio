@@ -4,20 +4,24 @@ $(function(){
   const $slidesNav = $('#slides>.slides-nav>li>a');
   const $btnPrev = $('#slides>a').eq(0);
   const $btnNext = $('#slides>a').eq(1);
-
+  
   let nowIdx = 0;
   let intervalkey = '';
-
-
+  
+  
   // 함수선언
   function moveFn(){
     //활성화 
     $slidesNav.eq(nowIdx).parent().addClass('on').siblings().removeClass('on');
-  
+    
     //이동 
     $container.stop().animate({
       left : -478 * nowIdx
-    },400,"easeInOutCubic");
+    },400,"easeInOutCubic",function(){
+      const $slides = $('#slides>.slides-img>.slides-container>li');
+      $slides.first().appendTo($container);
+      $container.css({left : 0});
+    });
   }
 
 
@@ -52,6 +56,7 @@ $(function(){
   // 이전버튼
   $btnPrev.on('click',function(evt){
     evt.preventDefault();
+    clearInterval(intervalkey);
     
     if(nowIdx>0){
       nowIdx--;
@@ -66,6 +71,7 @@ $(function(){
   // 다음버튼
   $btnNext.on('click',function(evt){
     evt.preventDefault();
+    clearInterval(intervalkey);
     nextIdx();
     moveFn();
   });

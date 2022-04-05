@@ -7,6 +7,9 @@ $(function(){
     let nowIdx = 0;
     let intervalkey = '';
 
+    // $slidesContainer.first().append($slidesContainer.clone().addClass('clone'));
+    // $slidesContainer.last().prepend($slidesContainer.clone().addClass('clone'));
+
 
     //슬라이드 이동 함수 
     function moveFn(){

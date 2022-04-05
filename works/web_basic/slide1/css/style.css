@@ -109,7 +109,7 @@ h1{
 
 /* 슬라이드 컨테이너 */
 #slides>.slides-img{
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   margin: 30px auto;
   width: 478px;
